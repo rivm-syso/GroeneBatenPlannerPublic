@@ -1,0 +1,50 @@
+description: >
+    Informatie over hoe de bostypen kunnen worden afgeleid uit de BGT.
+code: {
+    geen bos   : 0,
+    gemengd bos: 1,
+    loofbos    : 2,
+    naaldbos   : 3
+}
+classification:
+    description: >
+        Bostype wordt afgeleid uit de BGT.
+    simple:
+        source: [bgt]
+        relation:
+            - [pand                  , geen bos   ]
+            - [wegdeel               , geen bos   ]
+            - [berm                  , geen bos   ]
+            - [verkeerseiland        , geen bos   ]
+            # - [transitie             , geen bos   ]
+            - ["oever, slootkant"    , geen bos   ]
+            - [slik                  , geen bos   ]
+            # - [transitie             , geen bos   ]
+            - [erf                   , geen bos   ]
+            - [gesloten verharding   , geen bos   ]
+            - [open verharding       , geen bos   ]
+            - [half verhard          , geen bos   ]
+            - [zand                  , geen bos   ]
+            - ["greppel, droge sloot", geen bos   ]
+            - [waterloop             , geen bos   ]
+            - [watervlakte           , geen bos   ]
+            - [zee                   , geen bos   ]
+            # - [transitie             , geen bos   ]
+            - [boomteelt             , geen bos   ]
+            - [bouwland              , geen bos   ]
+            - [duin                  , geen bos   ]
+            - [fruitteelt            , geen bos   ]
+            - [gemengd bos           , gemengd bos]
+            - [grasland agrarisch    , geen bos   ]
+            - [grasland overig       , geen bos   ]
+            - [groenvoorziening      , geen bos   ]
+            - [heide                 , geen bos   ]
+            - [houtwal               , geen bos   ]
+            - [kwelder               , geen bos   ]
+            - [loofbos               , loofbos    ]
+            - [moeras                , geen bos   ]
+            - [naaldbos              , naaldbos   ]
+            - [rietland              , geen bos   ]
+            - [struiken              , geen bos   ]
+            # - [transitie             , geen bos   ]
+            - [functioneelgebied     , geen bos   ]
