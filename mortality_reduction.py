@@ -83,12 +83,12 @@ def function(
 
     ndvi_wa = pcr.windowaverage(ndvi_pos, 300 * 2 + cell_size)
 
-    mortality_reduction_perc = (
-        2.3 * ndvi_wa * 10
-    )  # percentage reduced mort risk, 2.3% reductie in mortality risk voor elke 0.1 stijging NDVI
+    mortality_reduction_frac = (
+        ndvi_wa / 0.1 * 0.04
+    )  # fraction reduction mort risk, 0.04 fractionreduction in mortality risk voor elke 0.1 NDVI
     mortality_reduction = (
-        mortality_reduction_perc / 100 * population * mort
-    )  # change in mortality per cell: mortality per inwoner * fraction * nr inwoners in a cell
+        mortality_reduction_frac * population * mort
+    )  # change in mortality per cell: mortality per inwoner * fraction reduction * nr inwoners in a cell
 
     mortality_reduction_total = pcr.maptotal(mortality_reduction)
     inwoner_total = pcr.maptotal(population)
